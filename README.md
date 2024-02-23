@@ -26,13 +26,14 @@
     "hobi": ["menulis", "makan"]
   }
 ]
+```
 
 ## project hierarchy
 
-![Screenshot of Project Hierarchy](https://i.postimg.cc/YCtgjsbW/Screenshot-2024-02-23-at-20-42-08.png)
+![App Screenshot](https://i.postimg.cc/YCtgjsbW/Screenshot-2024-02-23-at-20-42-08.png)
 
 ## Screenshot
 
-![Screenshot of Project Hierarchy](https://i.postimg.cc/K8QTTDHs/Screenshot-2024-02-23-at-20-43-50.png)
+![App Screenshot](https://i.postimg.cc/K8QTTDHs/Screenshot-2024-02-23-at-20-43-50.png)
 
 
