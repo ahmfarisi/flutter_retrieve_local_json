@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'dart:convert';
 import 'package:flutter_retrieve_local_json/models/karyawan.dart';
+import 'package:intl/intl.dart' show toBeginningOfSentenceCase;
 
 void main() {
   runApp(const MainApp());
@@ -45,19 +46,23 @@ class MyHomePage extends StatelessWidget {
             return ListView.builder(
               itemCount: snapshot.data!.length,
               itemBuilder: (context, index) {
-                return ListTile(
-                  title: Text(
-                    snapshot.data![index].nama,
-                    style: const TextStyle(fontWeight: FontWeight.bold),
-                  ),
-                  subtitle: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      Text('Umur: ${snapshot.data![index].umur}'),
-                      Text('Alamat: ${snapshot.data![index].alamat.jalan}, '
-                          '${snapshot.data![index].alamat.kota}, '
-                          '${snapshot.data![index].alamat.provinsi}'),
-                    ],
+                return Card(
+                  child: ListTile(
+                    title: Text(
+                      snapshot.data![index].nama,
+                      style: const TextStyle(fontWeight: FontWeight.bold),
+                    ),
+                    subtitle: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Text('Umur: ${snapshot.data![index].umur}'),
+                        Text('Alamat: ${snapshot.data![index].alamat.jalan}, '
+                            '${snapshot.data![index].alamat.kota}, '
+                            '${snapshot.data![index].alamat.provinsi}'),
+                        Text(
+                            'Hobi: ${toBeginningOfSentenceCase(snapshot.data![index].hobi.join(', '))}'),
+                      ],
+                    ),
                   ),
                 );
               },
